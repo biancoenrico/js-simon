@@ -25,32 +25,36 @@ for(var i = 0; i < 5; i++){
 }
 
 // avvio timer di 30 secondi
-var seconds = 10;
+var seconds = 5;
 
 
 var timer = setInterval(function(){
     document.getElementById('countdown').innerHTML = seconds;
 
-    
+    var numero = document.getElementsByClassName('numero')
+    var content = document.getElementsByClassName('content')
+    var input = document.getElementsByClassName('void-input')
 
     if(seconds == 0){
-
-        for(var j = 0; j < 5; j++){
-            document.getElementsByClassName('void-input')[j].className = "input";
-        }
-        for( j = 0; j < 5; j++){
-            document.getElementsByClassName('content')[j].className = 'void';
-        }
-        for( j = 0; j < 5; j++){
-            document.getElementsByClassName('numero')[j].className = 'void';
-        }
+        var j = 0
+        // while(j < 5){
+        //     console.log(j);
+        //     numero[j].className = 'void';
+        //     console.log(j);
+        //     content[j].className = 'void';
+        //     input[j].className = "input";
+        //     j++
+        //     if(!j == 4){
+        //         clearInterval(timer);
+        //     }
+        // }
 
     }else{
         seconds--
     }
     
 }, 1000);
-
+console.log('CIAO');
 
 
 console.log(arrayNumeri);
