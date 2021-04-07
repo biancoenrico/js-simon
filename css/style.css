@@ -3,23 +3,57 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-image: url(../img/legno.jpg);
+}
 .container{
     display:flex;
     justify-content: space-around;
 }
-.numero{
+.numero , .input{
     text-align: center;
+    height: 150px;
     width: 150px;
     padding: 30px;
-    margin: 10px;
+    margin: 30px 10px;
     background-color: lightgray;
     border: 1px solid black;
     border-radius: 50%;
+    font-size: 80px;
+    font-weight: bold;
+    outline: none;
 }
-.content{
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.void {
+    visibility: hidden;
+}
+.void-input{
+    visibility: hidden;
+}
+#countdown{
+    text-align: center;
     font-size: 80px;
     font-weight: bold;
 }
-.void{
-    visibility: hidden;
+p{
+    margin: auto;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    width: 800px;
+}
+.countdown{
+    background-color: lightgreen;
+    width: 800px;
+    padding-bottom: 100px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    border: 1px solid black;
 }

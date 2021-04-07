@@ -6,7 +6,7 @@
 
 
 // genero 5 numeri casuali
-var arrayNumeri = []
+var arrayNumeri = [];
 
 while(arrayNumeri.length < 5) {
 
@@ -18,16 +18,42 @@ while(arrayNumeri.length < 5) {
     }
 }
 // inserisco i numeri nell'html
-var numero
+var numero;
 
 for(var i = 0; i < 5; i++){
-    numero = document.getElementsByClassName('numero')[i].innerHTML = ('<span class ="content">' + arrayNumeri[i] + '</span>')
+    numero = document.getElementsByClassName('numero')[i].innerHTML += ('<span class ="content">' + arrayNumeri[i] + '</span>');
 }
 
 // avvio timer di 30 secondi
+var seconds = 10;
 
-// chiedo all'utente di inserire i numeri
 
+var timer = setInterval(function(){
+    document.getElementById('countdown').innerHTML = seconds;
+
+    
+
+    if(seconds == 0){
+
+        for(var j = 0; j < 5; j++){
+            document.getElementsByClassName('void-input')[j].className = "input";
+        }
+        for( j = 0; j < 5; j++){
+            document.getElementsByClassName('content')[j].className = 'void';
+        }
+        for( j = 0; j < 5; j++){
+            document.getElementsByClassName('numero')[j].className = 'void';
+        }
+
+    }else{
+        seconds--
+    }
+    
+}, 1000);
+
+
+
+console.log(arrayNumeri);
 // do l'esito del gioco
 
 // funzioni
