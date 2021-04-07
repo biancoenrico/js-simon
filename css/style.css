@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display:flex;
+    justify-content: space-around;
+}
+.numero{
+    text-align: center;
+    width: 150px;
+    padding: 30px;
+    margin: 10px;
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.content{
+    font-size: 80px;
+    font-weight: bold;
+}
+.void{
+    visibility: hidden;
+}
