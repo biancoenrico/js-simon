@@ -29,39 +29,60 @@ var seconds = 5;
 
 
 var timer = setInterval(function(){
+
     document.getElementById('countdown').innerHTML = seconds;
 
-    var numero = document.getElementsByClassName('numero')
-    var content = document.getElementsByClassName('content')
-    var input = document.getElementsByClassName('void-input')
-
     if(seconds == 0){
-        var j = 0
-        // while(j < 5){
-        //     console.log(j);
-        //     numero[j].className = 'void';
-        //     console.log(j);
-        //     content[j].className = 'void';
-        //     input[j].className = "input";
-        //     j++
-        //     if(!j == 4){
-        //         clearInterval(timer);
-        //     }
-        // }
 
+        
+        console.log('blocco tutto');
+        
+        clearInterval(timer);
+
+        var numero = document.getElementsByClassName('numero');
+        var content = document.getElementsByClassName('content');
+        var input = document.getElementsByClassName('void-input');        
+
+        var j = 0;
+
+        for(j = 0; j < 5; j++){
+
+            numero[0].className = 'void';
+
+            input[0].className = "input";
+        }
+                
     }else{
         seconds--
     }
     
 }, 1000);
-console.log('CIAO');
+
+var arrayNumeriUtente = []
+var bottone = document.getElementById('btn');
+var messaggio = 'hai vinto';
+
+bottone.addEventListener('click',function (){
+
+    for(i = 0; i < 5; i++){
+
+        var elements = document.getElementsByTagName("input")[i].value;
+        arrayNumeriUtente.push(parseInt(elements));
+
+        if(arrayNumeriUtente[i]!==arrayNumeri[i]){
+            messaggio = 'hai perso'
+        }
+    }
+    alert(messaggio)
+ 
+})
 
 
-console.log(arrayNumeri);
-// do l'esito del gioco
+
+
 
 // funzioni
 // 
 function generaNumeri(max) {
-    return Math.floor(Math.random() * max) + 1;
+    return parseInt(Math.floor(Math.random() * max) + 1); 
 }

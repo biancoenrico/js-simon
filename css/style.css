@@ -57,3 +57,14 @@ p{
     border-radius: 15px;
     border: 1px solid black;
 }
+#btn{
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px 40px;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 15px;
+    outline: none;
+    background-color: cyan;
+} 
