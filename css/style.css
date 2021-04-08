@@ -68,3 +68,6 @@ p{
     outline: none;
     background-color: cyan;
 } 
+label{
+    display: none;
+}
