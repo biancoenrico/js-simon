@@ -20,12 +20,12 @@ while(arrayNumeri.length < 5) {
 // inserisco i numeri nell'html
 var numero;
 
-for(var i = 0; i < 5; i++){
+for(var i = 0; i < arrayNumeri.length; i++){
     numero = document.getElementsByClassName('numero')[i].innerHTML += ('<span class ="content">' + arrayNumeri[i] + '</span>');
 }
 
 // avvio timer di 30 secondi
-var seconds = 5;
+var seconds = 30;
 
 
 var timer = setInterval(function(){
@@ -45,7 +45,7 @@ var timer = setInterval(function(){
 
         var j = 0;
 
-        for(j = 0; j < 5; j++){
+        for(j = 0; j < arrayNumeri.length; j++){
 
             numero[0].className = 'void';
 
@@ -64,16 +64,16 @@ var messaggio = 'hai vinto';
 
 bottone.addEventListener('click',function (){
 
-    for(i = 0; i < 5; i++){
+    for(i = 0; i < arrayNumeri.length; i++){
 
         var elements = document.getElementsByTagName("input")[i].value;
         arrayNumeriUtente.push(parseInt(elements));
 
         if(arrayNumeriUtente[i]!==arrayNumeri[i]){
-            messaggio = 'hai perso'
+            messaggio = 'hai perso';
         }
     }
-    alert(messaggio)
+    alert(messaggio);
  
 })
 
